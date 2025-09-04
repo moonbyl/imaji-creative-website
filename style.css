@@ -756,3 +756,100 @@ html, body {
   flex-direction: column;
 }
 
+/* ========================= */
+/* 📱 Responsive Adjustments */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  section {
+    padding: 80px 15px;
+  }
+
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr; /* jadi 1 kolom */
+  }
+  .team-item.last {
+    grid-column: auto;
+  }
+
+  .partnership-grid {
+    grid-template-columns: repeat(3, 1fr); /* dari 5 jadi 3 */
+  }
+
+  .design-layout {
+    grid-template-columns: 1fr; /* stack vertikal */
+  }
+  .center-grid {
+    grid-template-columns: 1fr; /* stack juga */
+  }
+
+  .grid-6x3 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-icon i {
+    font-size: 40px;
+  }
+}
