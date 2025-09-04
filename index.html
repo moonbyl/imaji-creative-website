@@ -14,16 +14,21 @@
 </head>
 <body>
 
-  <!-- Header / Navbar -->
   <header>
     <div class="logo">Imaji Creative</div>
-    <nav>
+
+    <!-- Tombol hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="navbar">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#partnership">Partnership</a></li>
-        <li><a href="#portfolio">Portofolio</a></li>
-        <li><a href="#pricelist">Pricelist</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricelist">Price List</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -356,5 +361,14 @@
 
 
   <script src="script.js"></script>
+  <script>
+  const toggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  toggle.addEventListener("click", () => {
+    navbar.classList.toggle("show");
+  });
+</script>
+
 </body>
 </html>

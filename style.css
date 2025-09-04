@@ -853,3 +853,47 @@ html, body {
     font-size: 40px;
   }
 }
+
+
+
+/* Tombol hamburger (hanya muncul di mobile) */
+/* Tombol hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Navbar default */
+#navbar {
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Mobile mode */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block; /* tampil di mobile */
+  }
+
+  #navbar {
+    width: 100%;
+    overflow: hidden;
+    max-height: 0; /* disembunyikan */
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  #navbar.show {
+    max-height: 500px; /* dibuka */
+  }
+}
